@@ -63,6 +63,51 @@ Extra whitespace can be confusing in your programs. To programmers 'python' and 
 But to a program, they are two different strings. Python detects the extra space in 'python ' and considers it significant 
 unless you tell it otherwise.
 
+Python uses two multiplication symbols to represent exponents
+Python supports the order of operations too, so you can use multiple operations in one expression. 
+You can also use parentheses to modify the order of operations so Python can evaluate your expression in the order you specify.
+
+floats - any number with a decimal point
+
+When you divide any two numbers, even if they are integers that result in a whole number, you’ll always get a float
+>>> 4/2
+2.0
+
+If you mix an integer and a float in any other operation, you’ll get a float as well
+>>> 1 + 2.0
+3.0
+>>> 2 * 3.0
+6.0
+>>> 3.0 ** 2
+9.0
+
+Python defaults to a float in any operation that uses a float, even if the output is a whole number.
+
+When you’re writing long numbers, you can group digits using underscores to make large numbers more readable:
+>>> universe_age = 14_000_000_000
+When you print a number that was defined using underscores, Python prints only the digits:
+>>> print(universe_age)
+14000000000
+Python ignores the underscores when storing these kinds of values. Even if you don’t group the digits in threes, the value 
+will still be unaffected.
+
+
+
+You can assign values to more than one variable using just a single line.
+This can help shorten your programs and make them easier to read.
+>>> x, y, z = 0, 0, 0
+You need to separate the variable names with commas, and do the same with the values, and Python will assign each value to its 
+respectively positioned variable.
+
+
+Constant = is like a variable whose value stays the same throughout the life of a program.
+* Python doesn’t have built-in constant types, but Python programmers use all capital letters to indicate a variable should be 
+treated as a constant and never be changed. 
+When you want to treat a variable as a constant in your code, make the name of the variable all capital letters.
+
+
+
+
 
 
 
