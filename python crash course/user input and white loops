@@ -28,7 +28,7 @@ User Input and while Loops 117
 The for loop takes a collection of items and executes a block of code once for each item in the collection. In contrast, the while
 loop runs as long as, or while a certain condition is true. 
 
-
+flags (condition active or unactive):
 For a program that should run only as long as many conditions are true, you can define one variable that determines whether or 
 not the entire program is active. This variable, called a flag, acts as a signal to the program. We can write our programs so 
 they run while the flag is set to true and stop running when any of several events sets the value of the flag to False.
@@ -47,7 +47,7 @@ while active:
 ------------------------------------------------------------------------
 
 
-
+break:
 To exit a while loop immediately without running any remaining code in the loop, regardless of the results of any conditional test,
 use the break statement. The break statement directs the flow of your program; you can use it to control which lines of code are 
 executed and which aren’t, so the program only executes code that you want it to, when you want it to.
@@ -68,7 +68,7 @@ the user to enter the names of cities they’ve been to until they enter 'quit'.
 causing Python to exit the loop.
 
 
-
+Continue:
 you can use the continue statement to return to the beginning of the loop based on the result of a conditional test. 
 For example, consider a loop that counts from 1 to 10 but prints only the odd numbers in that range:
 -----------------------------------
@@ -93,6 +93,16 @@ Using while loops with lists and dictionaries allows you to collect, store, and 
 report on later.
 
 remove() function worked because the value we were interested in appeared only once in the list.
+
+
+
+
+
+
+
+
+
+
 
 
 
