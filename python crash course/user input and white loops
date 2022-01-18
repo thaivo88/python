@@ -88,9 +88,11 @@ Python prints the current number.
 
 
 
+to keep track of many users and pieces of information, we’ll need to use lists and dictionaries with our while loops.
+Using while loops with lists and dictionaries allows you to collect, store, and organize lots of input to examine and 
+report on later.
 
-
-
+remove() function worked because the value we were interested in appeared only once in the list.
 
 
 
