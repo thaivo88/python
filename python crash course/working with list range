@@ -53,7 +53,32 @@ print(numbers)
 
 
 
+We can also use the range() function to tell Python to skip numbers in a given range. If you pass a third argument to range(), 
+Python uses that value as a step size when generating numbers.
+------------------------------------------------------
+even_numbers = list(range(2, 11, 2))
+print(even_numbers)
+------------------------------------------------------
+[2, 4, 6, 8, 10]
+------------------------------------------------------
 
+
+
+A list comprehension allows you to generate this same list in just one line of code. A list comprehension combines the
+for loop and the creation of new elements into one line, and automatically appends each new element.
+------------------------------------------------------
+squares = []
+for value in range(1,11):
+  squares.append(value**2)
+print(squares)
+------------------------------------------------------
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+------------------------------------------------------
+squares = [value**2 for value in range(1, 11)]        # list comprehension
+print(squares)
+------------------------------------------------------
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+------------------------------------------------------
 
 
 
