@@ -34,12 +34,22 @@ print(value)
 3
 4
 --------------------------
+You can also pass range() only one argument, and it will start the sequence of numbers at 0. For example,
+range(6) would return the numbers from 0 through 5.
+
 ** range is like seq in bash **
 ** for i in $(seq 1 4) **
 
 
 
-
+If you want to make a list of numbers, you can convert the results of range() directly into a list using the list() function.
+When you wrap list() around a call to the range() function, the output will be a list of numbers.
+---------------------------
+numbers = list(range(1, 6))
+print(numbers)
+---------------------------
+[1, 2, 3, 4, 5]
+---------------------------
 
 
 
