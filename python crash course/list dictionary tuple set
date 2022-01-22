@@ -1,0 +1,4 @@
+list use [x, xn+1, ...]
+tuple use (x, xn+1, ...)
+dictionary use {x : y, xn+1 : yn+1, ...}
+set use {x, xn+1, ...}
