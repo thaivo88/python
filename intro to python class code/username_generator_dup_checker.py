@@ -43,34 +43,34 @@ employee_dict = {}
     #Make sure to use line comments to fully explain the inputs
 
 print("Please enter at least 5 employees informations \nInclude at least 2 employees with same first initial in their first name and same last name and same birth year.")
-while len(employee_info) < 5:
-    fname = input("Enter employee's first name: ")
-    while len(fname) < 2:
-        fname = input("Enter employee's first name: ")
+while len(employee_info) < 5:                                                                           # a loop len of 5
+    fname = input("Enter employee's first name: ")                                                      # asking user to input a first name
+    while len(fname) < 2:                                                                               # making sure the name is greater than 2 lenght
+        fname = input("Enter employee's first name: ")                                                  # asking user to input a first name
 
-    lname = input("Enter employee's last name: ")
-    while len(lname) < 2:
-        lname = input("Enter employee's last name: ")
+    lname = input("Enter employee's last name: ")                                                       # asking user to input a last name
+    while len(lname) < 2:                                                                               # making sure the name is greater than 2 lenght
+        lname = input("Enter employee's last name: ")                                                   # asking user to input a last name
 
-    birthyr = input("Enter employee's birth year (YYYY): ")
-    while len(birthyr) < 4:
-        birthyr = input("Enter employee's birth year (YYYY): ")
+    birthyr = input("Enter employee's birth year (YYYY): ")                                             # asking user to input a birth year
+    while len(birthyr) < 4:                                                                             # making sure the birth year is 4 lenght long
+        birthyr = input("Enter employee's birth year (YYYY): ")                                         # asking user to input a birth year
 
-    print("You entered employee " + fname + " " + lname + " " + birthyr + " is this correct? ")
+    print("You entered employee " + fname + " " + lname + " " + birthyr + " is this correct? ")         # print statement asking if their entry is correct
 
-    yn = input("Yes or No ")
+    yn = input("Yes or No ")                                                                            # ask the user to input yes or no
 
-    if(yn in ylist):
-        employee_data = (fname, lname, birthyr)
-        employee_info.append(employee_data)
+    if(yn in ylist):                                                                                    # if the user input any format of yes the employee's information is append to the list
+        employee_data = (fname, lname, birthyr)                                                         # placing first name, last name, birth year into a list
+        employee_info.append(employee_data)                                                             # adding and appending each set into the list 
         fname = ""
         lname = ""
         birthyr = ""
-    else:
+    else:                                                                                               # when user input NO the variable is cleared out so the user can redo that input
         fname = ""
         lname = ""
         birthyr = ""
-        continue
+        continue                                                                                        # make the loop go back in the beginning to start that entry over
 
 
 #Process section
