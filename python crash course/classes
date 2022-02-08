@@ -1,0 +1,49 @@
+Object-oriented programming is one of the most effective approaches to writing software.
+In object-oriented programming you write classes that represent real-world things and situations, and you create objects 
+based on these classes. When you write a class, you define the general behavior that a whole category of objects can have.
+
+Making an object from a class is called instantiation, and you work with instances of a class.
+capitalized names refer to classes in Python
+--------------------------------------------------------------
+class Dog:
+  """A simple attempt to model a dog."""
+  def __init__(self, name, age):
+    """Initialize name and age attributes."""
+    self.name = name
+    self.age = age
+    
+  def sit(self):
+    """Simulate a dog sitting in response to a command."""
+    print(f"{self.name} is now sitting.")
+
+  def roll_over(self):
+    """Simulate rolling over in response to a command."""
+    print(f"{self.name} rolled over!")
+
+my_dog = Dog('Willie', 6)
+your_dog = Dog('Lucy', 3)
+
+print(f"My dog's name is {my_dog.name}.")
+print(f"My dog is {my_dog.age} years old.")
+my_dog.sit()
+
+print(f"\nYour dog's name is {your_dog.name}.")
+print(f"Your dog is {your_dog.age} years old.")
+your_dog.sit()
+--------------------------------------------------------------
+My dog's name is Willie.
+My dog is 6 years old.
+Willie is now sitting.
+
+Your dog's name is Lucy.
+Your dog is 3 years old.
+Lucy is now sitting.
+--------------------------------------------------------------
+A function that’s part of a class is a method. Everything you learned about functions applies to methods as well; 
+the only practical difference for now is the way we’ll call methods.
+The __init__() method at is a special method that Python runs automatically whenever we create a new instance based
+on the Dog class. This method has two leading underscores and two trailing underscores, a convention that helps prevent 
+Python’s default method names from conflicting with your method names.
+The self parameter is required in the method definition, and it must come first before the other parameters.
+
+
