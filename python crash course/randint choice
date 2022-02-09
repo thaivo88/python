@@ -1,0 +1,9 @@
+to generate a random number between 1 and 6:
+  randint(1, 6)
+  
+takes in a list or tuple and returns a randomly chosen element:
+  players = ['charles', 'martina', 'michael', 'florence', 'eli']
+  first_up = choice(players)
+  print(first_up)
+  
+  
