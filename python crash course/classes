@@ -2,6 +2,9 @@ Object-oriented programming is one of the most effective approaches to writing s
 In object-oriented programming you write classes that represent real-world things and situations, and you create objects 
 based on these classes. When you write a class, you define the general behavior that a whole category of objects can have.
 
+Class names should be written in CamelCase. To do this, capitalize the first letter of each word in the name, 
+and don’t use underscores.
+
 Making an object from a class is called instantiation, and you work with instances of a class.
 capitalized names refer to classes in Python
 --------------------------------------------------------------
