@@ -129,6 +129,9 @@ Defining Attributes and Methods for the Child Class:
 Once you have a child class that inherits from a parent class, you can add any new attributes and methods necessary to 
 differentiate the child class from the parent class.
 
+When you store your classes in several modules, you may find that a class in one module depends on a class in another module.
+When this happens, you can import the required class into the first module.
+
 
 
 
