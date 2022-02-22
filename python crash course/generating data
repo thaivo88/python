@@ -34,6 +34,10 @@ Matplotlib’s viewer and displays the plot,
 # Set the range for each axis.
 # axis() method requires four values: the minimum and maximum values for the x-axis and the y-axis.
   ax.axis([0, 1100, 0, 1100000])
+  
+# Remove the axes.
+  ax.get_xaxis().set_visible(False)
+  ax.get_yaxis().set_visible(False)  
 
 For the example above the x value is given as default incurrments of 1 starting at 0
 if we want to use our own x value we must provide the values
@@ -116,6 +120,56 @@ to pyplot.savefig():
   plt.savefig('squares_plot.png', bbox_inches='tight')
 The first argument is a filename for the plot image. The second argument trims extra whitespace from the plot. 
 If you want the extra whitespace around the plot, just omit this argument.
+
+
+
+
+A random walk is a path that has no clear direction but is determined by a series of random decisions, each of which is 
+left entirely to chance.
+------------------------------------------------------------------------
+from random import choice
+class RandomWalk:
+  """A class to generate random walks."""
+  def __init__(self, num_points=5000):
+    """Initialize attributes of a walk."""
+    self.num_points = num_points
+    # All walks start at (0, 0).
+    self.x_values = [0]
+    self.y_values = [0]
+  def fill_walk(self):
+  """Calculate all the points in the walk."""
+  # Keep taking steps until the walk reaches the desired length.
+  while len(self.x_values) < self.num_points:
+    Decide which direction to go and how far to go in that direction.
+    x_direction = choice([1, -1])    
+    x_distance = choice([0, 1, 2, 3, 4])
+    x_step = x_direction * x_distance
+    y_direction = choice([1, -1])
+    y_distance = choice([0, 1, 2, 3, 4])
+    y_step = y_direction * y_distance
+    Reject moves that go nowhere.
+    if x_step == 0 and y_step == 0:
+      continue
+    # Calculate the new position.
+    x = self.x_values[-1] + x_step
+    y = self.y_values[-1] + y_step
+    self.x_values.append(x)
+    self.y_values.append(y)
+------------------------------------------------------------------------
+import matplotlib.pyplot as plt
+from random_walk import RandomWalk
+# Make a random walk.
+rw = RandomWalk()
+rw.fill_walk()
+# Plot the points in the walk.
+plt.style.use('classic')
+fig, ax = plt.subplots()
+ax.scatter(rw.x_values, rw.y_values, s=15)
+plt.show()
+------------------------------------------------------------------------
+
+
+
 
 
 
