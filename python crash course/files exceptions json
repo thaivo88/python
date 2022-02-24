@@ -58,7 +58,12 @@ The second argument, 'w', tells Python that we want to open the file in write mo
 You can open a file in read mode ('r'), write mode ('w'), append mode ('a'), 
 or a mode that allows you to read and write to the file ('r+'). 
 If you omit the mode argument, Python opens the file in read-only mode by default.
+
+
+
 ![python rwa](https://user-images.githubusercontent.com/15881158/155607243-6cd4fddf-1b71-489d-be7c-98b4c2e7b5a7.PNG)
+
+
 
 The open() function automatically creates the file you’re writing to if it doesn’t already exist. However, be careful opening a file 
 in write mode ('w') because if the file does exist, Python will erase the contents of the file before returning the file object.
