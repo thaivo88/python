@@ -69,11 +69,11 @@ The simplest way to modify the value of an attribute is to access the attribute 
 [instance].[attribute] = [value]
 ```
 
-    -Modifying an Attribute’s Value Through a Method
+    Modifying an Attribute’s Value Through a Method:
 It can be helpful to have methods that update certain attributes for you. Instead of accessing the attribute directly, 
 you pass the new value to a method that handles the updating internally.    
   
-    -Incrementing an Attribute’s Value Through a Method
+    Incrementing an Attribute’s Value Through a Method:
 Sometimes you’ll want to increment an attribute’s value by a certain amount rather than set an entirely new value.
 
 
