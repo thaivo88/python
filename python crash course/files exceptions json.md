@@ -31,11 +31,12 @@ OR the python script has to be in a parent directory and the text can be in a su
 OR it can be anywhwere but you use the file - absolute file path
 
 if absolute file path is too long you can shorten it with a variable:
+```
 ----------------------------------------------------------------------------------------
 file_path = '/home/ehmatthes/other_files/text_files/filename.txt'
 with open(file_path) as file_object:
 ----------------------------------------------------------------------------------------
-
+```
 
 
 When you use with, the file object returned by open() is only available inside the with block that contains it.
@@ -49,11 +50,13 @@ the readlines() method takes each line from the file and stores it in a list.
 
 
 To write text to a file, you need to call open() with a second argument telling Python that you want to write to the file.
+```
 ---------------------------------------------
 filename = 'programming.txt'
 with open(filename, 'w') as file_object:
   file_object.write("I love programming.")
 ---------------------------------------------  
+```
 The call to open() in this example has two arguments. The first argument is still the name of the file we want to open. 
 The second argument, 'w', tells Python that we want to open the file in write mode.
 
@@ -95,16 +98,18 @@ if an exception is raised. When you use try-except blocks, your programs will co
 
 
 Using try-except blocks
+```
 --------------------------------------
 try:
   print(5/0)
 except ZeroDivisionError:
   print("You can't divide by zero!")
 --------------------------------------
+```
 Since you can't divide by zero python run into an error.
 
 
-
+```
 --------------------------------------
 try:
   answer = int(first_number) / int(second_number)
@@ -113,6 +118,7 @@ except ZeroDivisionError:
 else:
   print(answer)
 --------------------------------------  
+```
 Any code that depends on the try block executing successfully goes in the else block.
 
 
@@ -130,6 +136,7 @@ so you can share data you store in the JSON format with people who work in many 
 
 The json.dump() function takes two arguments: a piece of data to store and a file object it can use to store the data.
 
+```
 json.dump
 --------------------------------------
 import json
@@ -138,7 +145,8 @@ filename = 'numbers.json'
 with open(filename, 'w') as f:
   json.dump(numbers, f)
 --------------------------------------
-
+```
+```
 json.load
 --------------------------------------
 import json
@@ -147,7 +155,7 @@ with open(filename) as f:
   numbers = json.load(f)
 print(numbers)
 --------------------------------------
-
+```
 
 
 
