@@ -283,30 +283,39 @@ storing your functions in a separate file called a module and then importing tha
 import statement tells Python to make the code in a module available in the currently running program file.
 To call a function from an imported module, enter the name of the module you imported followed by the name of the function,
 separated by a dot.
+```
   module_name.function_name()
+```
 
 You can also import a specific function from a module. Here’s the general syntax for this approach:
+```  
   from module_name import function_name
+```
 
 You can import as many functions as you want from a module by separating each function’s name with a comma:
-  from module_name import function_0, function_1, function_2
-
+```
+from module_name import function_0, function_1, function_2
+```
 
 
 Using as to give a function as alias
 If the name of a function you’re importing might conflict with an existing name in your program or if the function name is long, 
 you can use a short, unique alias—an alternate name similar to a nickname for the function. You’ll give the function this special 
 nickname when you import the function.
+```
   from module_name import function_name as fn
   from pizza import make_pizza as mp
-  
-You can also provide an alias for a module name. Giving a module a short alias  
+```
+
+You can also provide an alias for a module name. Giving a module a short alias 
+```
   import module_name as mn
   import pizza as p
-  
+```  
   
 importing all functions in a module
 You can tell Python to import every function in a module by using the asterisk (*) operator:
+```
   from module_name import *
-  
+```  
   
