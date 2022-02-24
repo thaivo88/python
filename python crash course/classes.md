@@ -7,6 +7,7 @@ and don’t use underscores.
 
 Making an object from a class is called instantiation, and you work with instances of a class.
 capitalized names refer to classes in Python
+```
 --------------------------------------------------------------
 class Dog:
   """A simple attempt to model a dog."""
@@ -42,6 +43,7 @@ Your dog's name is Lucy.
 Your dog is 3 years old.
 Lucy is now sitting.
 --------------------------------------------------------------
+```
 A function that’s part of a class is a method. Everything you learned about functions applies to methods as well; 
 the only practical difference for now is the way we’ll call methods.
 The __init__() method at is a special method that Python runs automatically whenever we create a new instance based
@@ -63,8 +65,10 @@ a method, or increment the value (add a certain amount to it) through a method.
 
     -Modifying an attribute's value directly
 The simplest way to modify the value of an attribute is to access the attribute directly through an instance.
-  [instance].[attribute] = [value]
-  
+```
+[instance].[attribute] = [value]
+```
+
     -Modifying an Attribute’s Value Through a Method
 It can be helpful to have methods that update certain attributes for you. Instead of accessing the attribute directly, 
 you pass the new value to a method that handles the updating internally.    
@@ -85,7 +89,7 @@ method from the parent class. This will initialize any attributes that were defi
 them available in the child class.
 
 When you create a child class, the parent class must be part of the current file and must appear before the child class in the file.
-
+```
 ------------------------------------------------------------------
 class Car:
   """A simple attempt to represent a car."""
@@ -122,6 +126,8 @@ class ElectricCar(Car):
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
 ------------------------------------------------------------------
+```
+
 The super() function is a special function that allows you to call a method from the parent class. This line tells Python to 
 call the __init__() method from Car, which gives an ElectricCar instance all the attributes defined in that method. 
 The name super comes from a convention of calling the parent class a superclass and the child class a subclass.
