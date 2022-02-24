@@ -60,20 +60,20 @@ with instances created from that class.
 
 
                                               Modifying attribute values
-You can change an attribute’s value in three ways: you can change the value directly through an instance, set the value through 
-a method, or increment the value (add a certain amount to it) through a method.
+  You can change an attribute’s value in three ways: 
+you can change the value directly through an instance, set the value through a method, or increment the value (add a certain amount to it) through a method.
 
-Modifying an attribute's value directly:
+  Modifying an attribute's value directly:
 The simplest way to modify the value of an attribute is to access the attribute directly through an instance.
 ```
 [instance].[attribute] = [value]
 ```
 
-Modifying an Attribute’s Value Through a Method:
+  Modifying an Attribute’s Value Through a Method:
 It can be helpful to have methods that update certain attributes for you. Instead of accessing the attribute directly, 
 you pass the new value to a method that handles the updating internally.    
   
-Incrementing an Attribute’s Value Through a Method:
+  Incrementing an Attribute’s Value Through a Method:
 Sometimes you’ll want to increment an attribute’s value by a certain amount rather than set an entirely new value.
 
 
