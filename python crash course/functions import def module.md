@@ -9,13 +9,13 @@ docstring is a function comment that describe the function does it use triple qu
 parameter is a piece of information the function needs to do its job assigned as a variable
 argument is a piece of information that is passed from a function call to a function.
 the variable parameter calls on the argument
-
+```
 ---------------------------------------
 def [name_of_function]([parameter]):
   [codes]
 ---------------------------------------
-
-
+```
+```
 ---------------------------------------
 def greet_user(username):
   """Display a simple greeting."""
@@ -25,12 +25,13 @@ greet_user('jesse')
 ---------------------------------------
 Hello, Jesse!
 ---------------------------------------
-
+```
 Passing Arguments: function can have multiple parameters to call multiple arguments.
 Positional arguments which need to be in the same order the parameters were written
 Keyword arguments where each argument consists of a variable name and a value
 
 Positional argument:
+```
 ------------------------------------------------------------
 def describe_pet(animal_type, pet_name):
   """Display information about a pet."""
@@ -42,8 +43,10 @@ describe_pet('hamster', 'harry')
 I have a hamster.
 My hamster's name is Harry.
 ------------------------------------------------------------
+```
 
 Keyword argument:
+```
 ------------------------------------------------------------
 def describe_pet(animal_type, pet_name):
   """Display information about a pet."""
@@ -55,11 +58,13 @@ describe_pet(animal_type='hamster', pet_name='harry')
 I have a hamster.
 My hamster's name is Harry.
 ------------------------------------------------------------
+```
 
 you can define a default value for each parameter. If an argument for a parameter is provided in the function call, Python uses
 the argument value. If not, it uses the parameter’s default value.
 
 default value:
+```
 ------------------------------------------------------------
 def describe_pet(pet_name, animal_type='dog'):
   """Display information about a pet."""
@@ -71,12 +76,14 @@ describe_pet(pet_name='willie')
 I have a dog.
 My dog's name is Willie.
 ------------------------------------------------------------
+```
 If you specify a default value for a parameter, no spaces should be used on either side of the equal sign
 
 The value the function returns is called a return value. The return statement takes a value 
 from inside a function and sends it back to the line that called the function.
 
 return value:
+```
 ------------------------------------------------------------
 def get_formatted_name(first_name, last_name):
   """Return a full name, neatly formatted."""
@@ -88,12 +95,13 @@ print(musician)
 ------------------------------------------------------------
 Jimi Hendrix
 ------------------------------------------------------------
-
+```
 
 
 Making an Argument Optional
 To make the middle name optional, we can give the middle_name argument an empty defult value and ignore the argument unless the
 user provides a value.
+```
 ---------------------------------------------------------------
 def get_formatted_name(first_name, last_name, middle_name=''):
   """Return a full name, neatly formatted."""
@@ -113,10 +121,11 @@ print(musician)
 Jimi Hendrix
 John Lee Hooker
 ---------------------------------------------------------------
-
+```
 
 
 Passing a list
+```
 ---------------------------------------------------------------
 def greet_users(names):
   """Print a simple greeting to each user in the list."""
@@ -131,9 +140,11 @@ Hello, Hannah!
 Hello, Ty!
 Hello, Margot!
 ---------------------------------------------------------------
+```
 
 modifying a list in a function
 Without function def
+```
 --------------------------------------------------------------------
 # Start with some designs that need to be printed.
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
@@ -151,8 +162,10 @@ print("\nThe following models have been printed:")
 for completed_model in completed_models:
   print(completed_model)
 --------------------------------------------------------------------
+```
 
 with function def
+```
 --------------------------------------------------------------------
 def print_models(unprinted_designs, completed_models):
   """
@@ -184,7 +197,7 @@ dodecahedron
 robot pendant
 phone 
 --------------------------------------------------------------------
-
+```
 
 
 preventing a function from modifying a list
@@ -197,6 +210,7 @@ passing an arbitrary number of arguments
 Sometimes you won’t know ahead of time how many arguments a function needs to accept. Fortunately, 
 Python allows a function to collect an arbitrary number of arguments from the calling statement.
 The asterisk in the parameter name *toppings tells Python to make an empty tuple
+```
 --------------------------------------------------------------------
 def make_pizza(*toppings):
   """Print the list of toppings that have been requested."""
@@ -207,12 +221,13 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 ('pepperoni',)
 ('mushrooms', 'green peppers', 'extra cheese')
 --------------------------------------------------------------------
-
+```
 
 
 Mixing positional and arbitrary arguments
 If you want a function to accept several different kinds of arguments, the parameter that accepts an arbitrary number 
 of arguments must be placed last in the function definition.
+```
 ----------------------------------------------------------------------
 def make_pizza(size, *toppings):
   """Summarize the pizza we are about to make."""
@@ -231,7 +246,7 @@ Making a 12-inch pizza with the following toppings:
 - green peppers
 - extra cheese
 ----------------------------------------------------------------------
-
+```
 
 
 Using arbitrary keyword arguments
@@ -239,6 +254,7 @@ Sometimes you’ll want to accept an arbitrary number of arguments, but you
 won’t know ahead of time what kind of information will be passed to the
 function. In this case, you can write functions that accept as many key-value
 pairs as the calling statement provides.
+```
 ----------------------------------------------------------------------
 def build_profile(first, last, **user_info):
   """Build a dictionary containing everything we know about a user."""
@@ -254,6 +270,7 @@ print(user_profile)
 {'location': 'princeton', 'field': 'physics',
 'first_name': 'albert', 'last_name': 'einstein'}
 ----------------------------------------------------------------------
+```
 The definition of build_profile() expects a first and last name, and then it allows the user to pass in as many name-value 
 pairs as they want. The double asterisks before the parameter **user_info cause Python to create an empty dictionary called
 user_info and pack whatever name-value pairs it receives into this dictionary. Within the function, you can access the key
