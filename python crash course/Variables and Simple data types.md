@@ -49,6 +49,7 @@ last_name = "lovelace"
 print(full_name)
 ------------------------------------------
 ```
+```
 output:
 ------------------------------------------
 ada lovelace
@@ -63,8 +64,10 @@ in braces with its value.
 
 In programming, whitespace refers to any nonprinting character, such as spaces, tabs, and end-of-line symbols. 
 You can use whitespace to organize your output so it’s easier for users to read.
+```
 /t - tab
 /n - new line
+```
 
 Extra whitespace can be confusing in your programs. To programmers 'python' and 'python ' look pretty much the same. 
 But to a program, they are two different strings. Python detects the extra space in 'python ' and considers it significant 
@@ -77,24 +80,31 @@ You can also use parentheses to modify the order of operations so Python can eva
 floats - any number with a decimal point
 
 When you divide any two numbers, even if they are integers that result in a whole number, you’ll always get a float
+```
 >>> 4/2
 2.0
-
+```
 If you mix an integer and a float in any other operation, you’ll get a float as well
+```
 >>> 1 + 2.0
 3.0
 >>> 2 * 3.0
 6.0
 >>> 3.0 ** 2
 9.0
+```
 
 Python defaults to a float in any operation that uses a float, even if the output is a whole number.
 
 When you’re writing long numbers, you can group digits using underscores to make large numbers more readable:
+```
 >>> universe_age = 14_000_000_000
+```
 When you print a number that was defined using underscores, Python prints only the digits:
+```
 >>> print(universe_age)
 14000000000
+```
 Python ignores the underscores when storing these kinds of values. Even if you don’t group the digits in threes, the value 
 will still be unaffected.
 
@@ -102,7 +112,9 @@ will still be unaffected.
 
 You can assign values to more than one variable using just a single line.
 This can help shorten your programs and make them easier to read.
+```
 >>> x, y, z = 0, 0, 0
+```
 You need to separate the variable names with commas, and do the same with the values, and Python will assign each value to its 
 respectively positioned variable.
 
