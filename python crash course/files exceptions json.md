@@ -4,6 +4,7 @@ json module, which allows you to save user data so it isn’t lost when your pro
 
 
 
+```
 pi_digits.txt 
 --------------------------------------------
 3.1415926535
@@ -14,6 +15,7 @@ with open('pi_digits.txt') as file_object:
   contents = file_object.read()
 print(contents)
 --------------------------------------------
+```
 open() function: you first need to open the file to access it.
 The open() function needs one argument: the name of the file you want to open.
 open('pi_digits.txt') Python assigns this object to file_object
