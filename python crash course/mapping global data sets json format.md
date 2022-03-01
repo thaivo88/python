@@ -40,5 +40,58 @@ This <b>geoJSON</b> file has a structure that’s helpful for location-based dat
 
 
 
+Using the list containing data about each earthquake, we can loop through that list and extract any information we want. Now we’ll pull the magnitude of each earthquake.
+```
+--snip--
+all_eq_dicts = all_eq_data['features']
+mags = []
+for eq_dict in all_eq_dicts:
+  mag = eq_dict['properties']['mag']
+  mags.append(mag)
+print(mags[:10])
+--------- Output ---------
+[0.96, 1.2, 4.3, 3.6, 2.1, 4, 1.06, 2.3, 4.9, 1.8]
+```
 
 
+Extracting Location Data
+The location data is stored under the key "geometry". Inside the geometry dictionary is a "coordinates" key, and the first two values in this list are the longitude and latitude.
+```
+--snip--
+all_eq_dicts = all_eq_data['features']
+mags, lons, lats = [], [], []
+for eq_dict in all_eq_dicts:
+  mag = eq_dict['properties']['mag']
+  lon = eq_dict['geometry']['coordinates'][0]
+  lat = eq_dict['geometry']['coordinates'][1]
+  mags.append(mag)
+  lons.append(lon)
+  lats.append(lat)
+print(mags[:10])
+print(lons[:5])
+print(lats[:5])
+--------- Output ---------
+[0.96, 1.2, 4.3, 3.6, 2.1, 4, 1.06, 2.3, 4.9, 1.8]
+[-116.7941667, -148.9865, -74.2343, -161.6801, -118.5316667]
+[33.4863333, 64.6673, -12.1025, 54.2232, 35.3098333]
+```
+
+
+Building a World map
+With plotly, a geo map of the world can be use with coordinates as x (longitudes) and y (latitudes) axis
+```
+import json
+from plotly.graph_objs import Scattergeo, Layout
+from plotly import offline
+--snip--
+for eq_dict in all_eq_dicts:
+--snip--
+Map the earthquakes.
+data = [Scattergeo(lon=lons, lat=lats)]
+my_layout = Layout(title='Global Earthquakes')
+fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='global_earthquakes.html')
+```
+--------- Output ---------
+
+![image](https://user-images.githubusercontent.com/15881158/156099918-e1c0f28d-6da8-45fb-9306-cf43e4d91b0a.png)
