@@ -34,6 +34,11 @@ json file now is more readable
 "features": [
 --snip--
 ```
-The indent=4 argument tells dump() to format the data using indentation that matches the data’s structure.
+The <i>indent=4</i> argument tells <i>dump()</i> to format the data using indentation that matches the data’s structure.
+<b>"metadata"</b> This tells us when the data file was generated and where we can find the data online
+This <b>geoJSON</b> file has a structure that’s helpful for location-based data.
+
+
+
 
 
