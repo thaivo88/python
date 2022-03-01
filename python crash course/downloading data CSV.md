@@ -76,3 +76,14 @@ plt.show()
 
 
 
+From the list the date is index 2
+The data will be read in as a string, so we need a way to convert the string "2018-07-01" to an object representing this date. We can construct an object representing July 1, 2018 using the <i>strptime()</i> method from the <i>datetime</i> module.
+```
+>>> from datetime import datetime
+>>> first_date = datetime.strptime('2018-07-01', '%Y-%m-%d')
+>>> print(first_date)
+2018-07-01 00:00:00
+```
+
+![image](https://user-images.githubusercontent.com/15881158/156085828-1ea35f38-0468-4ff0-a978-edf9d73de366.png)
+
