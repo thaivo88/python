@@ -87,3 +87,70 @@ The data will be read in as a string, so we need a way to convert the string "20
 
 ![image](https://user-images.githubusercontent.com/15881158/156085828-1ea35f38-0468-4ff0-a978-edf9d73de366.png)
 
+combining date and high temp
+```
+import csv
+from datetime import datetime
+import matplotlib.pyplot as plt
+filename = 'data/sitka_weather_07-2018_simple.csv'
+
+with open(filename) as f:
+  reader = csv.reader(f)
+  header_row = next(reader)
+  # Get dates and high temperatures from this file.
+  dates, highs = [], []
+  for row in reader:
+    current_date = datetime.strptime(row[2], '%Y-%m-%d')
+    high = int(row[5])
+    dates.append(current_date)
+    highs.append(high)
+# Plot the high temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+ax.plot(dates, highs, c='red')
+# Format plot.
+plt.title("Daily high temperatures, July 2018", fontsize=24)
+plt.xlabel('', fontsize=16)
+fig.autofmt_xdate()
+plt.ylabel("Temperature (F)", fontsize=16)
+plt.tick_params(axis='both', which='major', labelsize=16)
+plt.show()
+```
+------------- Output -------------
+
+![image](https://user-images.githubusercontent.com/15881158/156087669-3f69fb6e-12f7-485e-9b63-cd2f0aa3f78a.png)
+
+
+Plotting two set of data
+```
+--snip--
+filename = 'sitka_weather_2018_simple.csv'
+with open(filename) as f:
+  reader = csv.reader(f)
+  header_row = next(reader)
+  # Get dates, and high and low temperatures from this file.
+  dates, highs, lows = [], [], []
+  for row in reader:
+    current_date = datetime.strptime(row[2], '%Y-%m-%d')
+    high = int(row[5])
+    low = int(row[6])
+    dates.append(current_date)
+    highs.append(high)
+    lows.append(low)
+# Plot the high and low temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+ax.plot(dates, highs, c='red')
+ax.plot(dates, lows, c='blue')
+# Format plot.
+plt.title("Daily high and low temperatures - 2018", fontsize=24)
+--snip--
+```
+------------- Output -------------
+
+![image](https://user-images.githubusercontent.com/15881158/156088185-10ee67e4-6f7c-4985-b7af-6d1ae1b4d8a7.png)
+
+
+
+
+
