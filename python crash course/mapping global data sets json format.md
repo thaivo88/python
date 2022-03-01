@@ -19,6 +19,8 @@ readable_file = 'data/readable_eq_data.json'
 with open(readable_file, 'w') as f:
   json.dump(all_eq_data, f, indent=4)
 ```
+json file now is more readable
+```
 {
 "type": "FeatureCollection",
 "metadata": {
@@ -33,3 +35,5 @@ with open(readable_file, 'w') as f:
 --snip--
 ```
 The indent=4 argument tells dump() to format the data using indentation that matches the data’s structure.
+
+
