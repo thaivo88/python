@@ -151,6 +151,22 @@ plt.title("Daily high and low temperatures - 2018", fontsize=24)
 ![image](https://user-images.githubusercontent.com/15881158/156088185-10ee67e4-6f7c-4985-b7af-6d1ae1b4d8a7.png)
 
 
+Shading an Area in the Chart
+Let’s add a finishing touch to the graph by using shading to show the range between each day’s high and low temperatures.
+To do so, we’ll use the <i>fill_between()</i> method, which takes a series of x-values and two series of y-values, and fills the space between the two y-value series:
+```
+--snip--
+# Plot the high and low temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, lows, c='blue', alpha=0.5)
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
+--snip--
+```
+------------- Output -------------
 
+![image](https://user-images.githubusercontent.com/15881158/156089648-69e52088-4091-4ea2-9d38-1ac9f0ceb042.png)
+The <i>facecolor</i> argument determines the color of the shaded region; we give it a low <i>alpha</i> value of 0.1 so the filled region connects the two data series without distracting from the information they represent.
 
 
