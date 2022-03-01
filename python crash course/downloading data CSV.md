@@ -69,8 +69,9 @@ plt.xlabel('', fontsize=16)
 plt.ylabel("Temperature (F)", fontsize=16)
 plt.tick_params(axis='both', which='major', labelsize=16)
 plt.show()
+```
 ------------- Output -------------
 ![image](https://user-images.githubusercontent.com/15881158/156084954-fcffe6cc-5d98-4627-a26e-cdd43ce24759.png)
-```
+
 
 
