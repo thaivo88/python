@@ -95,3 +95,28 @@ offline.plot(fig, filename='global_earthquakes.html')
 --------- Output ---------
 
 ![image](https://user-images.githubusercontent.com/15881158/156099918-e1c0f28d-6da8-45fb-9306-cf43e4d91b0a.png)
+
+
+Customizing Marker Size
+Plotly offers a huge variety of customizations you can make to a data series, each of which can be expressed as a key-value pair. Here we’re using the key 'marker' to specify how big each marker on the map should be.
+```
+import json
+--snip--
+# Map the earthquakes.
+data = [{
+  'type': 'scattergeo',
+  'lon': lons,
+  'lat': lats,
+  'marker': {
+    'size': [5*mag for mag in mags],
+  },
+}]
+my_layout = Layout(title='Global Earthquakes')
+--snip--
+```
+--------- Output ---------
+
+![image](https://user-images.githubusercontent.com/15881158/156221673-6f646962-db2e-42d6-9f5b-783a2e9bed3d.png)
+
+
+Customizing Marker Colors
