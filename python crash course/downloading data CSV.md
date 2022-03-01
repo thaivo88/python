@@ -12,3 +12,7 @@ with open(filename) as f:
 ------------- Output -------------  
 ['STATION', 'NAME', 'DATE', 'PRCP', 'TAVG', 'TMAX', 'TMIN']  
 ```
+
+The <i>reader</i> object processes the first line of comma-separated values in the file and stores each as an item in a list.
+The csv module contains a <i>next()</i> function, which returns the next line in the file when passed the reader object. In the preceding listing, we call <i>next()</i> only once so we get the first line of the file, which contains the file headers.
+
