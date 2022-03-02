@@ -142,11 +142,58 @@ data = [{
 
 ![image](https://user-images.githubusercontent.com/15881158/156270149-88f01c5f-eae1-43e0-96e4-00501cfdc0f4.png)
 
-We use the mags list to determine the color that’s used.
+We use the <i>mags</i> list to determine the color that’s used.
 
-The 'colorscale' setting tells Plotly which range of colors to use: 'Viridis' is a colorscale that ranges from dark blue to bright yellow and works well for this data set.
+The <i>'colorscale'</i> setting tells Plotly which range of colors to use: 'Viridis' is a colorscale that ranges from dark blue to bright yellow and works well for this data set.
 
-We set 'reversescale' to True, because we want to use bright yellow for the lowest values and dark blue for the most severe earthquakes.
+We set <i>'reversescale'</i> to True, because we want to use bright yellow for the lowest values and dark blue for the most severe earthquakes.
 
-The 'colorbar' setting allows us to control the appearance of the colorscale shown on the side of the map. Here we title the colorscale 'Magnitude' to make it clear what the colors represent.
+The <i>'colorbar'</i> setting allows us to control the appearance of the colorscale shown on the side of the map. Here we title the colorscale 'Magnitude' to make it clear what the colors represent.
 
+
+
+
+Other Colorscales
+```
+from plotly import colors
+for key in colors.PLOTLY_SCALES.keys():
+  print(key)
+--------- Output ---------
+Greys
+YlGnBu
+Greens
+--snip--
+Viridis
+```
+
+
+
+Adding Hover Text
+To finish this map, we’ll add some informative text that appears when you hover over the marker representing an earthquake. In addition to showing the longitude and latitude, which appear by default, we’ll show the magnitude and provide a description of the approximate location as well.
+```
+--snip--
+mags, lons, lats, hover_texts = [], [], [], []
+for eq_dict in all_eq_dicts:
+  --snip--
+  lat = eq_dict['geometry']['coordinates'][1]
+  title = eq_dict['properties']['title']
+  mags.append(mag)
+  lons.append(lon)
+  lats.append(lat)
+  hover_texts.append(title)
+--snip--
+# Map the earthquakes.
+data = [{
+  'type': 'scattergeo',
+  'lon': lons,
+  'lat': lats,
+  'text': hover_texts,
+  'marker': {
+--snip--
+  },
+}]
+--snip--
+```
+
+
+We first make a list called <i>hover_texts</i> to store the label we’ll use for each marker. The “title” section of the earthquake data contains a descriptive name of the magnitude and location of each earthquake in addition to its longitude and latitude. we pull this information and assign it to the variable <i>title</i>, and then append it to the list <i>hover_texts</i>.
