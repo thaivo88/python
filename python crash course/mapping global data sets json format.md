@@ -120,3 +120,33 @@ my_layout = Layout(title='Global Earthquakes')
 
 
 Customizing Marker Colors
+We can also customize each marker’s color to provide some classification to the severity of each earthquake. We’ll use Plotly’s colorscales to do this.
+```
+--snip--
+filename = 'data/eq_data_30_day_m1.json'
+--snip--
+# Map the earthquakes.
+data = [{
+--snip--
+  'marker': {
+    'size': [5*mag for mag in mags],
+    'color': mags,
+    'colorscale': 'Viridis',
+    'reversescale': True,
+    'colorbar': {'title': 'Magnitude'},
+  },
+}]
+--snip--
+```
+--------- Output ---------
+
+![image](https://user-images.githubusercontent.com/15881158/156270149-88f01c5f-eae1-43e0-96e4-00501cfdc0f4.png)
+
+We use the mags list to determine the color that’s used.
+
+The 'colorscale' setting tells Plotly which range of colors to use: 'Viridis' is a colorscale that ranges from dark blue to bright yellow and works well for this data set.
+
+We set 'reversescale' to True, because we want to use bright yellow for the lowest values and dark blue for the most severe earthquakes.
+
+The 'colorbar' setting allows us to control the appearance of the colorscale shown on the side of the map. Here we title the colorscale 'Magnitude' to make it clear what the colors represent.
+
