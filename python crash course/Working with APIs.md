@@ -30,11 +30,11 @@ print(response_dict.keys())
 Status code: 200
 dict_keys(['total_count', 'incomplete_results', 'items'])
 ```
-<b>headers = {'Accept': 'application/vnd.github.v3+json'}</b>
+
 GitHub is currently on the third version of its API, so we define headers for the API call w that ask explicitly to use this version of the API.
 Then we use <i>requests</i> to make the call to the API
 We call <i>get()</i> and pass it the URL and the header that we defined, and we assign the response object to the variable <i>r</i>.
-The response object has an attribute called <i>status_code/i>, which tells us whether the request was successful. (A status code of 200 indicates a successful response.)
+The response object has an attribute called <i>status_code</i>, which tells us whether the request was successful. (A status code of 200 indicates a successful response.)
 The API returns the information in JSON format, so we use the <i>json()</i> method to convert the information to a Python dictionary. We store the resulting dictionary in <i>response_dict</i>.
 
   
