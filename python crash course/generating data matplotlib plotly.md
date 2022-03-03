@@ -85,7 +85,7 @@ pyplot.style.available = [pyplot_alias].style.available
 To use the style use with pyplot, add the code before the generated code fig, ax = :
 ```
   pyplot.style.use('[style]')
-  plt.style.user('seaborn)        # pyplot alias is plt from the top example
+  plt.style.use('seaborn)        # pyplot alias is plt from the top example
 ```  
   
 To plot a single point, use the scatter() method. Pass the single (x, y) values of the point of interest to scatter()
