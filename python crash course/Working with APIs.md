@@ -1,0 +1,1 @@
+Your program will use a web application programming interface (API) to automatically request specific information from a website—rather than entire pages—and then use that information to generate a visualization. Because programs written like this will always use current data to generate a visualization, even when that data might be rapidly changing, it will always be up to date.
