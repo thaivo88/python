@@ -67,7 +67,7 @@ def csv_get():
 
 def book_info(query):
     """Generating information about a book from Google's API"""
-    key = "AIzaSyDCqGGoZVAH83KX-QqCqoRxIdvT8fNssKs"                     # API key
+    #key = "KEY_REMOVED_FOR_SAFETY"                     # API key
     api_addr = "https://www.googleapis.com/books/v1/volumes"            # URL to google's book API volume
     params = {"q": query, "maxResults": 1, "key": key}                  # params to add to the end of the url to pull the information 
     responses = requests.get(api_addr, params=params)                   # calling a request
