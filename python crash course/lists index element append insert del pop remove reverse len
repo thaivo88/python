@@ -1,12 +1,13 @@
 List:
 list = is a collection of items in a particular order
 square brackets ([]) indicate a list, and individual elements in the list are separated by commas.
-----------------------------------------------------------------------------
+```
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicycles)
-----------------------------------------------------------------------------
+```
+```
 ['trek', 'cannondale', 'redline', 'specialized']
-----------------------------------------------------------------------------
+```
 If you ask Python to print a list, Python returns its representation of the
 list, including the square brackets:
 
@@ -15,27 +16,29 @@ Indexing:
 you can access any element in a list by telling Python the position, or index, of the item desired.
 Indexing start with 0 from the left to right or
 -1 from the right to left (-1, Python always returns the last item in the list)
---------------------------------------------------------------
+```
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicycles[0])
---------------------------------------------------------------
+```
+```
 trek
---------------------------------------------------------------
+```
 
 
 Element:
 To change an element, use the name of the list followed by the index of the element you want to change, and then provide the new
 value you want that item to have.
------------------------------------------------
+```
 motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles)
 # modifying the first element of the list
 motorcycles[0] = 'ducati'
 print(motorcycles)
------------------------------------------------
+```
+```
 ['honda', 'yamaha', 'suzuki']
 ['ducati', 'yamaha', 'suzuki']
------------------------------------------------
+```
 
 
 
