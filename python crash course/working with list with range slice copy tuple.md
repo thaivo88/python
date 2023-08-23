@@ -1,14 +1,14 @@
 looping throught the entire list:
 Let’s say we have a list of magicians’ names, and we want to print out each name in the list.
--------------------------------------------
+```
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
 print(magician)
--------------------------------------------
+``````
 alice
 david
 carolina
--------------------------------------------
+```
 
 
 
